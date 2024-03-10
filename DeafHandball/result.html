@@ -43,6 +43,28 @@
             border-top: 3px solid #333333;
             border-right: 3px solid #333333;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* セル間の余白を削除 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        a {
+            color: blue; /* リンクの色 */
+            text-decoration: none; /* リンクの下線を削除 */
+        }
+        a:hover {
+            text-decoration: underline; /* マウスオーバー時のリンクの下線 */
+        }
     </style>
     <body>
         <h1>デフハンドボールサークル</h1>
@@ -64,8 +86,55 @@
         </div>
         </div>
 
-        <p>（デフハンドボールサークルについての説明）</p>
-        <!-- デフハンドボールサークル　集合写真なんかを載せたらなぁ。。。-->
-        <p>みなさんこんにちは！デフハンドボールサークルです！</p>
+        <h2>試合日程・試合結果</h2>
+        <label for="year-select">年を選択してください:</label>
+            <select id="year-select">
+              <option value="all">全シーズン</option>
+              <option value="2024">2024年</option>
+              <!-- 他の年度を追加 -->
+            </select>
+            
+            <div id="news-container">
+              <!-- ニュース項目を表示するコンテナ -->
+            </div>
+            
+            <script>
+            document.getElementById("year-select").addEventListener("change", function() {
+              var selectedYear = this.value;
+              filterNewsByYear(selectedYear);
+            });
+            
+            function filterNewsByYear(year) {
+              var newsItems = document.getElementsByClassName("news-item");
+              for (var i = 0; i < newsItems.length; i++) {
+                var newsItemYear = newsItems[i].getAttribute("data-year");
+                if (newsItemYear === year || year === "all") {
+                  newsItems[i].style.display = "block"; // 表示
+                } else {
+                  newsItems[i].style.display = "none"; // 非表示
+                }
+              }
+            }
+            </script>
+            
+            <!-- ここでニュース項目を動的に生成する（データ属性として年度を設定する） -->
+            <div class="news-item" data-year="">
+                <!--（空白）-->
+            </div>
+            <div class="news-item" data-year="2024">
+              <h3>2024年の試合日程・結果</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>日付・開始時刻</th><th>大会名</th><th>対戦チーム</th><th>スコア</th><th>会場名</th><th>スコア詳細</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>例) 2024年2月10日 18:00</td><td>第48回日本ハンドボールリーグ</td><td>大崎電気オーソル VS 琉球コラソン</td><td>大崎 32 - 29 琉球</td><td>霞ヶ浦文化体育会館</td><td>-</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
     </body>
 </html>
