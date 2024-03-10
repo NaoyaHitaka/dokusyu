@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Deaf Handball Homepage</title>
+    </head>
+    <style>
+        .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            background-color:#0000ff 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 170px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* セル間の余白を削除 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        a {
+            color: blue; /* リンクの色 */
+            text-decoration: none; /* リンクの下線を削除 */
+        }
+        a:hover {
+            text-decoration: underline; /* マウスオーバー時のリンクの下線 */
+        }
+    </style>
+    <body>
+        <h1>デフハンドボールサークル</h1>
+        <div class="button-container">
+        <div class="button01">
+            <a href="news.html">ニュース</a>
+        </div>
+        <div class="button01">
+            <a href="player.html">選手名鑑</a>
+        </div>
+        <div class="button01">
+            <a href="result.html">試合結果</a>
+        </div>
+        <div class="button01">
+            <a href="schedule.html">今後のスケジュール</a>
+        </div>
+        <div class="button01">
+            <a href="social.html">ソーシャル</a>
+        </div>
+        </div>
+        <h2>ニュース一覧</h2>
+            <label for="year-select">年を選択してください:</label>
+            <select id="year-select">
+              <option value="all">all</option>
+              <option value="2024">2024年</option>
+              <!-- 他の年度を追加 -->
+            </select>
+            
+            <div id="news-container">
+              <!-- ニュース項目を表示するコンテナ -->
+            </div>
+            
+            <script>
+            document.getElementById("year-select").addEventListener("change", function() {
+              var selectedYear = this.value;
+              filterNewsByYear(selectedYear);
+            });
+            
+            function filterNewsByYear(year) {
+              var newsItems = document.getElementsByClassName("news-item");
+              for (var i = 0; i < newsItems.length; i++) {
+                var newsItemYear = newsItems[i].getAttribute("data-year");
+                if (newsItemYear === year || year === "all") {
+                  newsItems[i].style.display = "block"; // 表示
+                } else {
+                  newsItems[i].style.display = "none"; // 非表示
+                }
+              }
+            }
+            </script>
+            
+            <!-- ここでニュース項目を動的に生成する（データ属性として年度を設定する） -->
+            <div class="news-item" data-year="all">
+                <!--（空白）-->
+            </div>
+            <div class="news-item" data-year="2024">
+              <h3>2024年のニュース項目</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>日付</th><th>項目</th><th>リンク</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2024年03月10日</td><td>ホームページを作成しました。</td><td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div> 
+    </body>
+</html>

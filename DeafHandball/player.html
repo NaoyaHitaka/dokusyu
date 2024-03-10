@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Deaf Handball Homepage</title>
+    </head>
+    <style>
+        .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            background-color:#0000ff 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 170px;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+    </style>
+    <body>
+        <h1>デフハンドボールサークル</h1>
+        <div class="button-container">
+        <div class="button01">
+            <a href="news.html">ニュース</a>
+        </div>
+        <div class="button01">
+            <a href="player.html">選手名鑑</a>
+        </div>
+        <div class="button01">
+            <a href="result.html">試合結果</a>
+        </div>
+        <div class="button01">
+            <a href="schedule.html">今後のスケジュール</a>
+        </div>
+        <div class="button01">
+            <a href="social.html">ソーシャル</a>
+        </div>
+        </div>
+
+        <p>（デフハンドボールサークルについての説明）</p>
+        <!-- デフハンドボールサークル　集合写真なんかを載せたらなぁ。。。-->
+        <p>みなさんこんにちは！デフハンドボールサークルです！</p>
+    </body>
+</html>
