@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Deaf Handball Homepage</title>
+        <title>Deaf Handball Homepage - social</title>
     </head>
     <style>
         .button-container {
@@ -18,9 +18,9 @@
             align-items: center;
             margin: 0 auto;
             padding: 1em 2em;
-            width: 170px;
+            width: 130px;
             color: #ffffff;
-            font-size: 18px;
+            font-size: 13.5px;
             font-weight: 500;
             background-color: #0000ff;
             /*border: 3px solid #a0c4d3;*/
@@ -42,6 +42,25 @@
         .button01 a:hover::after{
             border-top: 3px solid #333333;
             border-right: 3px solid #333333;
+        }
+        .image_size_m{
+	        width: 50px;
+	        height: 50px;	
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse; /* セル間の余白を削除 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
         }
     </style>
     <body>
@@ -66,7 +85,35 @@
             <a href="social.html">ソーシャル</a>
         </div>
         </div>
-
         
+        <p>デフハンドボールでは以下のSNSアカウントで活動様子などを掲載しています。</p>
+        <p>このホームページと併せてご利用ください。</p>
+
+
+        <table>
+            <tbody>
+              <tr>
+                <td rowspan="2">
+                <img src="Instagram_icon.png" alt="インスタグラムアイコン" class="image_size_m"></th>
+                 Instagram
+                </td>
+                <td>
+                   <a href="https://www.instagram.com/ntut_handball/" target="_blank">筑波技術大学ハンドボール<br>@ntut_handball</a> 
+                </td>
+                <td>筑波技術大学ハンドボールサークル</td>
+              </tr>
+              <tr>
+                <td><a href="https://instagram.com/deaf_handball_club.jp/" target="_blank">デフハンドボールクラブ<br>@deaf_handball_club</a>
+                </td>
+                <td>デフハンドボールクラブ</td>
+              </tr>
+            </tbody>
+            
+          </table>
+        <div>
+        
+        </div>
+
+
     </body>
 </html>
