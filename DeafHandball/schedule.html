@@ -43,6 +43,35 @@
             border-top: 3px solid #333333;
             border-right: 3px solid #333333;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #000;
+        }
+        th, td {
+            width: 30pt;
+            height: 40pt;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #000;
+            position: relative;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
     </style>
     <body>
         <h1>デフハンドボール</h1>
@@ -67,8 +96,90 @@
         </div>
         </div>
 
-        <p>（デフハンドボールサークルについての説明）</p>
-        <!-- デフハンドボールサークル　集合写真なんかを載せたらなぁ。。。-->
-        <p>みなさんこんにちは！デフハンドボールサークルです！</p>
+        <p>筑波技術大学ハンドボールサークルとデフハンドボールクラブの活動予定です！</p>
+        <div id="calendar"></div>
+        <div class="btn-container">
+            <button class="btn" onclick="prevMonth()">前月</button>
+            <button class="btn" onclick="nextMonth()">来月</button>
+        </div>
+        <div id="schedulePopup" class="schedule-popup"></div>
+
+        <script>
+            // カレンダーを表示する関数
+            function showCalendar(year, month) {
+                const calendarDiv = document.getElementById('calendar');
+                const date = new Date(year, month - 1);
+                const daysInMonth = new Date(year, month, 0).getDate();
+                const firstDayOfWeek = new Date(year, month - 1, 1).getDay();
+
+                let html = '<table>';
+                html += '<tr><th colspan="7">' + year + '年' + month + '月</th></tr>';
+                html += '<tr><th>日</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th></tr>';
+
+                let day = 1;
+                for (let i = 0; i < 6; i++) {
+                    html += '<tr>';
+                    for (let j = 0; j < 7; j++) {
+                        if (i === 0 && j < firstDayOfWeek) {
+                            html += '<td></td>';
+                        }
+                        else if (day > daysInMonth) {
+                            html += '<td></td>';
+                        }
+                        else {
+                            html += '<td><a href="show_schedule.html?year=' + year + '&month=' + month + '&day=' + day + '">' + day + '</a></td>';
+                            day++;
+                        }
+                    }
+                    html += '</tr>';
+                }
+
+                html += '</table>';
+                calendarDiv.innerHTML = html;
+            }
+
+            // 前の月を表示する関数
+            function prevMonth() {
+                let currentYear = parseInt(document.querySelector('th').textContent.split('年')[0]);
+                let currentMonth = parseInt(document.querySelector('th').textContent.split('年')[1].replace('月', ''));
+                if (currentMonth === 1) {
+                    currentYear--;
+                    currentMonth = 12;
+                }
+                else {
+                    currentMonth--;
+                }
+                showCalendar(currentYear, currentMonth);
+            }
+
+            // 次の月を表示する関数
+            function nextMonth() {
+                let currentYear = parseInt(document.querySelector('th').textContent.split('年')[0]);
+                let currentMonth = parseInt(document.querySelector('th').textContent.split('年')[1].replace('月', ''));
+                if (currentMonth === 12) {
+                    currentYear++;
+                    currentMonth = 1;
+                }
+                else {
+                    currentMonth++;
+                }
+                showCalendar(currentYear, currentMonth);
+            }
+            function showSchedule(year, month, day) {
+                window.open('show_schedule.html');
+            }
+
+            // ポップアップを閉じる関数
+            function closePopup() {
+                const schedulePopup = document.getElementById('schedulePopup');
+                schedulePopup.style.display = 'none';
+            }
+
+            // 初期表示
+            const currentDate = new Date();
+            const currentYear = currentDate.getFullYear();
+            const currentMonth = currentDate.getMonth() + 1;
+            showCalendar(currentYear, currentMonth);
+        </script>
     </body>
 </html>

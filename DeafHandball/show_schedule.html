@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>予定表示ページ</title>
+</head>
+<style>
+    .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            background-color:#0000ff 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 130px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+</style>
+<body>
+    <h1>デフハンドボール</h1>
+        <div class="button-container">
+        <div class="button01">
+            <a href="index.html">ホーム</a>
+        </div>
+        <div class="button01">
+            <a href="news.html">ニュース</a>
+        </div>
+        <div class="button01">
+            <a href="player.html">選手名鑑</a>
+        </div>
+        <div class="button01">
+            <a href="result.html">試合結果</a>
+        </div>
+        <div class="button01">
+            <a href="schedule.html">今後のスケジュール</a>
+        </div>
+        <div class="button01">
+            <a href="social.html">ソーシャル</a>
+        </div>
+        </div>
+
+        
+<div id="schedule"></div>
+
+<script>
+  // URLから年月日を取得する関数
+  function getDateFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const year = parseInt(urlParams.get('year'));
+    const month = parseInt(urlParams.get('month'));
+    const day = parseInt(urlParams.get('day'));
+    return {year, month, day};
+  }
+  window.onload = function() {
+  const date = getDateFromURL();
+  // 取得した日付情報を使って処理を行う
+  document.getElementById('dateInfo').textContent = date.year + '年' + date.month + '月' + date.day + '日の活動予定';
+  }
+  // 年月日を表示する関数
+  function showDate(year, month, day) {
+    const scheduleDiv = document.getElementById('schedule');
+    scheduleDiv.innerHTML = '<strong style="font-size: 20px;">'+ year + '年' + month + '月' + day + '日の活動予定です！</strong>';
+  }
+
+  // 初期表示
+  const {year, month, day} = getDateFromURL();
+  showDate(year, month, day);
+</script>
+</body>
+</html>
