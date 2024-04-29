@@ -72,9 +72,26 @@
             border: none;
             border-radius: 5px;
         }
+        .練習 {
+            background-color: lightblue;
+        }
+        .大会 {
+            background-color: orange;
+        }
+        .イベント {
+            background-color: rgb(57, 243, 144);
+        }
+        .today {
+            background-color: yellow;
+        }
+        .explanation {
+            margin-top: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
     </style>
     <body>
-        <h1>デフハンドボール</h1>
+        <h1>Deaf Handball Club</h1>
         <div class="button-container">
         <div class="button01">
             <a href="index.html">ホーム</a>
@@ -98,13 +115,39 @@
 
         <p>筑波技術大学ハンドボールサークルとデフハンドボールクラブの活動予定です！</p>
         <div id="calendar"></div>
+        <div class="explanation">
+            <p>青色のセルは練習日、オレンジ色のセルは試合日、緑色のセルはイベントが予定されています。</p>
+        </div>
         <div class="btn-container">
             <button class="btn" onclick="prevMonth()">前月</button>
             <button class="btn" onclick="nextMonth()">来月</button>
         </div>
         <div id="schedulePopup" class="schedule-popup"></div>
-
+        <div id="scheduleTable"></div>
         <script>
+            //データを格納する
+            let schedule = [
+                { id: 1, 日付: '2024-04-06', 時間: '13:00~17:00', 種別: '練習', 場所: '筑波技術大学体育館' , 備考: '-'},
+                { id: 2, 日付: '2024-04-13', 時間: '13:00~17:00', 種別: '練習', 場所: '筑波技術大学体育館' , 備考: '-'},
+                { id: 3, 日付: '2024-04-14', 時間: '10:00~' , 種別: '練習', 場所: '味の素ナショナルトレーニングセンター', 備考: '-'},
+                { id: 4, 日付: '2024-04-29', 時間: '16:00~' , 種別: '大会', 場所: '東京都あきる野市秋川体育館', 備考: '東京都4部リーグ'},
+                { id: 5, 日付: '2024-05-01', 時間: '18:00~21:00', 種別: '練習', 場所: '臨海青海特別支援学校', 備考: '-'},
+                { id: 6, 日付: '2024-05-03', 時間: '16:30~' , 種別: '大会', 場所: '神奈川・秋葉台文化体育館', 備考: '東京都4部リーグ'},
+                { id: 7, 日付: '2024-05-04', 時間: '15:00~18:00', 種別: '練習', 場所: '臨海青海特別支援学校', 備考: '-'},
+                { id: 8, 日付: '2024-05-08', 時間: '18:00~21:00', 種別: '練習', 場所: '水元小合学園', 備考: '-'},
+                { id: 9, 日付: '2024-05-11', 時間: '10:00~16:00', 種別: 'イベント', 場所: '茅ヶ崎中央公園', 備考: '湘南しゅわ市場'},
+                { id: 10, 日付: '2024-05-12', 時間: '15:00~18:00', 種別: '練習', 場所: '水元小合学園', 備考: '-'},
+                { id: 11, 日付: '2024-05-15', 時間: '18:00~21:00', 種別: '練習', 場所: '水元小合学園', 備考: '-'},
+                { id: 12, 日付: '2024-05-18', 時間: '15:00~18:00', 種別: '練習', 場所: '臨海青海特別支援学校', 備考: '-'},
+                { id: 13, 日付: '2024-05-29', 時間: '18:00~21:00', 種別: '練習', 場所: '水元小合学園', 備考: '-'}
+            ];
+            let scheduleData = {};
+            schedule.forEach(event => {
+                if (!scheduleData[event.日付]) {
+                scheduleData[event.日付] = [];
+                }
+                scheduleData[event.日付].push(event.種別);
+            });
             // カレンダーを表示する関数
             function showCalendar(year, month) {
                 const calendarDiv = document.getElementById('calendar');
@@ -127,17 +170,41 @@
                             html += '<td></td>';
                         }
                         else {
-                            html += '<td><a href="show_schedule.html?year=' + year + '&month=' + month + '&day=' + day + '">' + day + '</a></td>';
+                            const dateKey = year + '-' + month.toString().padStart(2, '0') + '-' + day.toString().padStart(2, '0');
+                            let cellClass = '';
+                            // カレンダーのセルのHTML生成部分で、条件によってクラスを設定
+                            if (scheduleData[dateKey]) {
+                                if (scheduleData[dateKey].includes('練習')) {
+                                    cellClass = '練習';
+                                } else if (scheduleData[dateKey].includes('大会')) {
+                                    cellClass = '大会';
+                                } else if (scheduleData[dateKey].includes('イベント')) {
+                                    cellClass = 'イベント';
+                                }
+                            }
+                            // 今日の日付を取得
+                            const todayDate = new Date();
+                            const todayYear = todayDate.getFullYear();
+                            const todayMonth = todayDate.getMonth() + 1;
+                            const todayDay = todayDate.getDate();
+                            const formattedToday = `${todayYear}-${String(todayMonth).padStart(2, '0')}-${String(todayDay).padStart(2, '0')}`;
+
+                            // 今日の日付とセルの日付が一致する場合にクラスを追加
+                            if (dateKey === formattedToday) {
+                                cellClass += ' today';
+                            }
+                            // 結果をログに出力
+                            //console.log(`今日の日付: ${today}`);
+                            html += '<td class="calendar-cell ' + cellClass + '"><a href="show_schedule.html?year=' + year + '&month=' + month + '&day=' + day + '">' + day + '</a></td>';
                             day++;
                         }
                     }
                     html += '</tr>';
                 }
-
                 html += '</table>';
                 calendarDiv.innerHTML = html;
             }
-
+            
             // 前の月を表示する関数
             function prevMonth() {
                 let currentYear = parseInt(document.querySelector('th').textContent.split('年')[0]);
@@ -165,8 +232,38 @@
                 }
                 showCalendar(currentYear, currentMonth);
             }
-            function showSchedule(year, month, day) {
-                window.open('show_schedule.html');
+            function openScheduleWindow(dateKey, year, month, day) {
+                const url = 'show_schedule.html?year=' + year + '&month=' + month + '&day=' + day;
+                window.open(url, '_blank');
+            }
+
+            // カレンダーのセルをクリックした際に、その日付に関連する予定を表示する関数
+            // カレンダーのセルがクリックされたときの処理
+            function getScheduleDetailsForDate(date) {
+                const year = date.year;
+                const month = date.month;
+                const day = date.day;
+
+                let scheduleData = {}; // scheduleDataを初期化
+
+                // ここで必要な処理を実行し、scheduleDataを適切に設定する
+
+                // 例えば、scheduleから特定の日付の予定データを抽出してscheduleDataに格納する処理を行う
+                schedule.forEach(event => {
+                    const eventDate = new Date(event.日付);
+                    if (
+                        eventDate.getFullYear() === year &&
+                        eventDate.getMonth() + 1 === month &&
+                        eventDate.getDate() === day
+                    ) {
+                        if (!scheduleData[dateKey]) {
+                            scheduleData[dateKey] = [];
+                        }
+                        scheduleData[dateKey].push(event);
+                    }
+                });
+
+                return scheduleData[dateKey] || [];
             }
 
             // ポップアップを閉じる関数
