@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                background-color: lightblue;
+            }
+            .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            /*background-color:#0000ff*/ 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 220px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        .container {
+            display: flex; /* コンテナ内の要素を水平に配置 */
+            align-items: center; /* 要素を中央に配置 */
+        }
+        .text {
+            margin-left: 20px; /* 文章と画像の間隔を設定 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        </style>
+        <title>学校生活について</title>
+    </head>
+    <body>
+        <h1>NaoyaHitaka's Introduction 日高直也の自己紹介ページ</h1>
+        <div class="button-container">
+            <div class="button01">
+                <a href="index.html">ホーム</a>
+            </div>
+            <div class="button01">
+                <a href="background.html">私の生い立ち</a>
+            </div>
+            <div class="button01">
+                <a href="student_life.html">学生生活について</a>
+            </div>
+            <div class="button01">
+                <a href="result.html">陸上大会記録</a>
+            </div>
+        </div>
+
+        <h4>~小学時代~</h4>
+        <p>小学4年・5年　健康委員会に所属</p>
+        <p>小学4年11月～筑肥線・地下鉄を利用した自主通学開始</p>
+        <p>小学5年～　水泳の苦手を克服するためにスイミングスクールに通いはじめる</p>
+        <p>小学6年　情報委員会に所属</p>
+
+        <h4>~中学時代~</h4>
+        <p>中学1年～中学3年　陸上競技部に所属する</p>
+        <p>中学1年の学習発表会　衣装係として活動</p>
+        <p>中学2年の学習発表会　広報係として活動</p>
+        <p>中学2年冬～　生徒会書記として活動</p>
+        <p>中学3年の学習発表会　演技係として活動</p>
+
+        <h4>~高校時代~</h4>
+        <p>高校は卓球部に所属ながらも、陸上競技は継続</p>
+        <p>高校は保健委員会に所属</p>
+        <p>高校2年に史上初の皆勤達成！</p>
+        <p>高校2年冬～生徒会副会長就任</p>
+        <p>高校3年文化祭当日3日前に過呼吸発作・うつ病発症</p>
+        <p>高校3年　体育祭　演技副リーダー</p>
+        <p>筑波技術大学　推薦入試合格</p>
+        <p>３年連続身だしなみチェックすべて合格</p>
+
+        <h4>~大学時代~</h4>
+        <p>大学1年は新型コロナウイルス世界的流行によりオンラインのみ</p>
+        <p>大学2年～関東地方での生活</p>
+        <p>大学2年5月～つくばサイレンツ所属（マネージャーとして）</p>
+        <p>大学3年～SA（スチューデントアシスタント担当）</p>
+        <p>  大学3年1学期：１年　統計確率A</p>
+        <p>  大学3年2学期：２年　ソフトウェア工学演習1</p>
+        <p>  大学4年1学期：１年　統計確率A、３年　ソフトウェア工学演習2</p>
+        <p>  大学4年2学期：２年　ソフトウェア工学演習1</p>
+        <p>大学3年～筑波技術大学陸上競技部所属</p>
+        <p>大学3年～学生アルバイト参加（研究協力（大阪・エキスポセンター・ハンドボール試合観賞・成田空港））</p>
+        <p>大学4年：つくばマラソン2023　初参戦・初完走（4時間39分11秒）</p>
+    </body>
+</html>

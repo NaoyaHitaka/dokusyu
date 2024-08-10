@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                background-color: lightblue;
+            }
+            .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            /*background-color:#0000ff*/ 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 220px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        .container {
+            display: flex; /* コンテナ内の要素を水平に配置 */
+            align-items: center; /* 要素を中央に配置 */
+        }
+        .text {
+            margin-left: 20px; /* 文章と画像の間隔を設定 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        </style>
+        <title>陸上競技記録</title>
+    </head>
+    <body>
+      　<h1>NaoyaHitaka's Introduction 日高直也の自己紹介ページ</h1>
+        <div class="button-container">
+            <div class="button01">
+                <a href="index.html">ホーム</a>
+            </div>
+            <div class="button01">
+                <a href="background.html">私の生い立ち</a>
+            </div>
+            <div class="button01">
+                <a href="student_life.html">学生生活について</a>
+            </div>
+            <div class="button01">
+                <a href="result.html">陸上大会記録</a>
+            </div>
+
+            </div>
+        
+        <h2>陸上大会記録</h2>
+        <p>ここは陸上競技記録を一覧にてお見せします！</p>
+
+        <table>
+            <thead>
+                <tr>
+                  <th>実施日付</th><th>大会名</th><th>種目</th><th>順位</th><th>タイム</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>2014年10月5日</td><td>第19回福岡市障がい者スポーツ大会</td><td>100m</td><td>4位</td><td>17"30</td>
+                </tr>
+                <tr>
+                  <td>2015年3月8日</td><td>第17回福岡市障がい者駅伝大会</td><td>1区</td><td>区間16位</td><td>9'02"</td>
+                </tr>
+                <tr>
+                  <td>2015年7月18日</td><td>福岡市中学校体育連盟大会</td><td>100m</td><td>8位</td><td>16"36</td>
+                </tr>
+                <tr>
+                  <td>2015年9月25日</td><td>九州聾学校体育大会in福岡</td><td>100m</td><td>8位</td><td>16"33</td>
+                </tr>
+                <tr>
+                  <td>2015年10月4日</td><td>第20回福岡市障がい者スポーツ大会</td><td>1500m</td><td>1位</td><td>6'30"</td>
+                </tr>
+                <tr>
+                  <td>2016年3月12日</td><td>第18回福岡市障がい者駅伝大会</td><td>5区</td><td>区間21位</td><td>10'34"</td>
+                </tr>
+                <tr>
+                  <td>2016年7月</td><td>福岡市中学校体育連盟大会</td><td>800m</td><td>レース内8位</td><td>2'48"</td>
+                </tr>
+                <tr>
+                  <td>2016年9月25日</td><td>第21回福岡市障がい者スポーツ大会</td><td>1500m</td><td>1位</td><td>5'50"</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>800m</td><td>2位</td><td>2'55"</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>4×100mリレー（補欠→1走）</td><td>2位</td><td></td>
+                </tr>
+                <tr>
+                  <td>2016年9月30日</td><td>九州聾学校体育大会in大分</td><td>800m</td><td>11位</td><td>2'48"</td>
+                </tr>
+                <tr>
+                  <td>2017年3月12日</td><td>第19回福岡市障がい者駅伝大会</td><td>6区</td><td>区間7位</td><td>9'22"</td>
+                </tr>
+                <tr>
+                  <td>2017年9月24日</td><td>第22回福岡市障がい者スポーツ大会</td><td>1500m</td><td>1位</td><td>5'52"</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>800m</td><td>1位</td><td>2'53"</td>
+                </tr>
+                <tr>
+                  <td>2017年12月15日</td><td>福岡県聴覚特別支援学校体育大会（マラソン大会）</td><td>5km</td><td>8位</td><td>20'42"</td>
+                </tr>
+                <tr>
+                  <td>2018年9月30日</td><td>第23回福岡市障がい者スポーツ大会</td><td>1500m</td><td>1位</td><td>5'21"(自己新)</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>800m</td><td>1位</td><td>2'42"（自己新）</td>
+                </tr>
+                <tr>
+                  <td>2018年12月14日</td><td>福岡県聴覚特別支援学校体育大会（マラソン大会）</td><td>5km</td><td>7位</td><td>19'11"</td>
+                </tr>
+                <tr>
+                  <td>2019年12月13日</td><td>福岡県聴覚特別支援学校体育大会（マラソン大会）</td><td>5km</td><td>7位</td><td>20'13"</td>
+                </tr>
+                <tr>
+                  <td>2022年5月29日</td><td>茨城県障がい者スポーツ大会</td><td>1500m</td><td>1位（レース内2位）</td><td>5'31"</td>
+                </tr>
+                <tr>
+                  <td>2022年11月27日</td><td>42.195kmリレーマラソンinひたちなか海浜公園(区間2km)</td><td>3区</td><td>-</td><td>7'59"（自己新）</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>13区</td><td>-</td><td>8'23"</td>
+                </tr>
+                <tr>
+                  <td></td><td></td><td>21区(2.195km)</td><td>-</td><td>10'05"</td>
+                </tr>
+                <tr>
+                  <td>2023年5月28日</td><td>茨城県障がい者スポーツ大会</td><td>1500m</td><td>1位（レース内3位）</td><td>5'41"60</td>
+                </tr>
+                <tr>
+                  <td>2023年11月26日</td><td>第42回つくばマラソン</td><td>フルマラソン</td><td>5799位</td><td>4時間39分11秒</td>
+                </tr>
+              </tbody>
+        </table>
+    </body>
+</html>

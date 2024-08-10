@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                background-color: lightblue;
+            }
+            .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            /*background-color:#0000ff*/ 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 220px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        .container {
+            display: flex; /* コンテナ内の要素を水平に配置 */
+            align-items: center; /* 要素を中央に配置 */
+        }
+        .text {
+            margin-left: 20px; /* 文章と画像の間隔を設定 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        </style>
+        <title>日高直也の自己紹介ページ</title>
+    </head>
+    <body>
+        <h1>NaoyaHitaka's Introduction 日高直也の自己紹介ページ</h1>
+        <div class="button-container">
+            <div class="button01">
+                <a href="index.html">ホーム</a>
+            </div>
+            <div class="button01">
+                <a href="background.html">私の生い立ち</a>
+            </div>
+            <div class="button01">
+                <a href="student_life.html">学生生活について</a>
+            </div>
+            <div class="button01">
+                <a href="result.html">陸上大会記録</a>
+            </div>
+
+            </div>
+        
+        <h2>ホーム</h2>
+        <div class="container">
+            <img src="スクリーンショット 2024-04-27 185331.png">
+            <div class="text">
+                <p>名前： 日高 直也</p>
+                <p>ふりがな： ひたか なおや</p>
+
+                <p>生年月日：2001年11月21日（22歳）</p>
+                <p>出身地：福岡県</p>
+                <p>コミュニケーション手段：口話＋手話</p>
+                <p>出身校：筑波技術大学</p>
+                
+                <p>趣味：スポーツ（陸上・長距離）、麻雀</p>
+                
+                <p>麻雀の中で好きな役：手役（發・中・東・南など）</p>
+                <p>和了したことのある役満：四暗刻（2回）・大三元（1回）</p>
+                
+                <h4>麻雀成績</h4>
+                <p>4人戦(2024年7月10日現在)</p>
+                <table>
+                    <thead>
+                        <th>シーズン</th><th>トータルポイント</th><th>半荘最高スコア</th><th>最下位回避率</th><th>試合数</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024年</td><td>388.7 pt</td><td>77,500</td><td>0.75(27回)</td><td>107試合</td>
+                        </tr>
+                        <tr>
+                            <td>2023年</td><td>-588.8 pt</td><td>93,800</td><td>0.74(31回)</td><td>121試合</td>
+                        </tr>
+                        <tr>
+                            <th>トータル</th><th>-200.1 pt</th><th>93,800</th><th>0.75(58回)</th><th>228試合</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>3人戦（2024年7月11日現在）</p>
+                <table>
+                    <thead>
+                        <th>シーズン</th><th>トータルポイント</th><th>半荘最高スコア</th><th>最下位回避率</th><th>試合数</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2024年</td><td>182.7 pt</td><td>105,000</td><td>0.67(122回)</td><td>379試合</td>
+                        </tr>
+                        <tr>
+                            <td>2023年</td><td>-1,260.4 pt</td><td>97,400</td><td>0.67(57回)</td><td>196試合</td>
+                        </tr>
+                        <tr>
+                            <th>トータル</th><th>-1,077.7 pt</th><th>105,000</th><th>0.67(179回)</th><th>575試合</th>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        
+    </body>
+</html>
