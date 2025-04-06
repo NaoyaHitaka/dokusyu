@@ -1,0 +1,463 @@
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                background-color: lightblue;
+            }
+            .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            /*background-color:#0000ff*/ 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 220px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        .container {
+            display: flex; /* コンテナ内の要素を水平に配置 */
+            align-items: center; /* 要素を中央に配置 */
+        }
+        .text {
+            margin-left: 20px; /* 文章と画像の間隔を設定 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* 各列の幅を固定する */
+  }
+  th, td {
+    border: 1px solid #000;
+    text-align: center;
+    padding: 8px;
+    width: calc(100% / 7); /* 列数に応じて均等に幅を割り当てる */
+  }
+  .highlight {
+    background-color: #FFA500 !important; /* 好みの背景色に変更 */
+  }
+  .total{
+    background-color: #a0c4d3 !important;
+  }
+        </style>
+        <title>2023年度後期について</title>
+    </head>
+    <body>
+        <h1>2023年度後期</h1>
+             
+        <table>
+            <thead>
+                <tr>
+                  <th></th><th>月曜日</th><th>火曜日</th><th>水曜日</th><th>木曜日</th><th>金曜日</th><th>土曜日</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1限</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>2限</td><td></td><td></td><td></td><td>ソフトウェア工学・演習1(SA)</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>3限</td><td></td><td></td><td></td><td>ソフトウェア工学・演習1(SA)</td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>4限</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>5限</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>6限</td><td></td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+             </tbody>
+        </table>
+
+        <h4>成績表</h4>
+        <p>総合GPA：　3.34</p>
+        <table>
+            <tbody>
+                <tr>
+                    <td>1年前期</td><td>3.18</td><td>1年後期</td><td>3.36</td>
+                </tr>
+                <tr>
+                    <td>2年前期</td><td>2.96</td><td>2年後期</td><td>3.62</td>
+                </tr>
+                <tr>
+                    <td>3年前期</td><td>3.15</td><td>3年後期</td><td>3.68</td>
+                </tr>
+                <tr>
+                    <td>4年前期</td><td>3.38</td><td>4年後期</td><td>4.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+        <table>
+            <thead>
+                    <th>科目名</th><th>履修年次</th><th>必修or選択</th><th>単位数</th><th>評価</th><th>GP</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>教養系教育科目</td><td>この時点で８／８</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>心理学</td><td>R2-1</td><td>選択</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>法律学</td><td>R2-2</td><td>選択</td><td>2</td><td>B</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>日本国憲法</td><td>R2-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>特別支援教育</td><td>R3-2</td><td>選択</td><td>2</td><td>B</td><td>4</td>
+                </tr>
+                <tr class="total">
+                    <td>教養系教育科目：合計</td><td></td><td></td><td>8</td><td></td><td>22</td>
+                </tr>
+                <tr>
+                    <td>語学教育科目</td><td>この時点で８／８（必修）</td><td>２／２（選択必修）</td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>英語A</td><td>R2-1</td><td>必修</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>英語B</td><td>R2-2</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>英語C</td><td>R3-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>日本手話言語基礎</td><td>R2-2</td><td>選択必修</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>日本語表現法A</td><td>R2-1</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>日本言語表現法B</td><td>R2-2</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr class="total">
+                    <td>語学教育科目：合計</td><td></td><td></td><td>10</td><td></td><td>34</td>
+                </tr>
+                <tr>
+                    <td>健康・スポーツ教育科目</td><td>この時点で３／３</td><td>１／１（選択必修）</td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>健康・スポーツA</td><td>R2-1</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>健康・スポーツB</td><td>R2-2</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>健康・スポーツC</td><td>R3-1</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>健康・スポーツD</td><td>R3-2</td><td>選択必修</td><td>1</td><td>A+</td><td>4</td>
+                </tr>
+                <tr class="total">
+                    <td>健康・スポーツ教育科目：合計</td><td></td><td></td><td>4</td><td></td><td>13</td>
+                </tr>
+                <tr>
+                    <td>キャリア教育科目</td><td>この時点で５／５</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>修学基礎</td><td>R2-1</td><td>必修</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>情報保障概論</td><td>R2-2</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>ろう・難聴者の社会参加</td><td>R3-1</td><td>必修</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr class="total">
+                    <td>キャリア教育科目：合計</td><td></td><td></td><td>5</td><td></td><td>17</td>
+                </tr>
+                <tr>
+                    <td>語学・スポーツ・キャリア教育科目・選択</td><td>この時点で１０／７</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>アメリカ手話言語1</td><td>R3-1</td><td>選択</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>アメリカ手話言語2</td><td>R3-2</td><td>選択</td><td>1</td><td>A+</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>コミュニケーションと社会環境</td><td>R2-1</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>聴覚障害教育と心理</td><td>R3-1</td><td>選択</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>企業と社会</td><td>R3-2</td><td>選択</td><td>2</td><td>A+</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>きこえない人の生活文化</td><td>R3-2</td><td>選択</td><td>2</td><td>A</td><td>3</td>
+                </tr>
+                <tr class="total">
+                    <td>キャリア教育科目：合計</td><td></td><td></td><td>10</td><td></td><td>27</td>
+                </tr>
+                <tr>
+                    <td>産業情報基礎教育科目</td><td>この時点で１６／１６（必修）</td><td>１０／６（選択）</td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>産業情報基礎演習A</td><td>R2-1</td><td>必修</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>産業情報基礎演習B</td><td>R2-2</td><td>必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>情報リテラシー</td><td>R2-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>コンピュータシステム概論</td><td>R2-2</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>数学1</td><td>R2-1</td><td>必修</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>数学2</td><td>R2-2</td><td>必修</td><td>2</td><td>B</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>統計確率A</td><td>R2-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>統計確率B</td><td>R2-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>情報数理A</td><td>R2-1</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>情報数理B</td><td>R2-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>解析学1</td><td>R2-1</td><td>選択</td><td>2</td><td>C</td><td>2</td>
+                </tr>
+                <tr>
+                    <td>解析学2</td><td>R2-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr class="total">
+                    <td>産業情報基礎教育科目：合計</td><td></td><td></td><td>26</td><td></td><td>85</td>
+                </tr>
+                <tr>
+                    <td>専門基礎教育科目</td><td>この時点で７／７（必修）</td><td>１２／２（選択）</td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>情報科学概論</td><td>R3-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>プログラミング演習1</td><td>R3-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>電気回路学・演習1</td><td>R3-1</td><td>必修</td><td>3</td><td>B</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>統計・確率論C</td><td>R3-1</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>線形代数学1</td><td>R3-1</td><td>選択</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>幾何学1</td><td>R3-1</td><td>選択</td><td>2</td><td>B</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>幾何学2</td><td>R3-2</td><td>選択</td><td>2</td><td>B</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>情報数理C</td><td>R3-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>応用数学B</td><td>R3-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr class="total">
+                    <td>専門基礎教育科目：合計</td><td></td><td></td><td>19</td><td></td><td>56</td>
+                </tr>
+                <tr>
+                    <td>専門教育科目（必修）</td><td>この時点で１２／１２</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>ソフトウェア工学・演習1</td><td>R3-2</td><td>必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>ネットワーク・セキュリティ論・演習</td><td>R4-1</td><td>必修</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>情報科学特別研究1</td><td>R5-1</td><td>必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr class="highlight">
+                    <td>情報科学特別研究2</td><td>R5-2</td><td>必修</td><td>4</td><td>A+</td><td>16</td>
+                </tr>
+                <tr class="total">
+                    <td>専門教育科目（必修）：合計</td><td></td><td></td><td>12</td><td></td><td>43</td>
+                </tr>
+                <tr>
+                    <td>専門教育科目（選択必修）</td><td>この時点で１４／１２</td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>論理回路設計論・応用演習</td><td>R3-1</td><td>選択必修</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>プログラミング演習2</td><td>R3-2</td><td>選択必修</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>データベース論・演習</td><td>R3-2</td><td>選択必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>ソフトウェア工学・演習2</td><td>R4-1</td><td>選択必修</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>マーケティング論・演習</td><td>R4-1</td><td>選択必修</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>情報システムセキュリティ演習</td><td>R4-2</td><td>選択必修</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>ビッグデータ処理・演習</td><td>R4-2</td><td>選択必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>情報探索法・演習</td><td>R4-2</td><td>選択必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>ビジネスデータ処理論・演習</td><td>R5-1</td><td>選択必修</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr class="total">
+                    <td>専門教育科目（選択必修）：合計</td><td></td><td></td><td>25</td><td></td><td>87</td>
+                </tr>
+                <tr>
+                    <td>専門教育科目（選択）</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>産業技術プロジェクトA</td><td>R4-2</td><td>選択</td><td>1</td><td>A+</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>産業技術プロジェクトC</td><td>R4-2</td><td>選択</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>統計・確率論D</td><td>R3-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>線形代数学2</td><td>R3-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>産業技術プロジェクトD</td><td>R4-2</td><td>選択</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>情報科学特別講義</td><td>R4-1</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>情報デザイン論・演習</td><td>R4-1</td><td>選択</td><td>3</td><td>B</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>ヒューマンインタフェース論</td><td>R4-1</td><td>選択</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>オペレーティングシステム論</td><td>R4-1</td><td>選択</td><td>2</td><td>A+</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>情報数理D</td><td>R4-1</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>情報科学セミナーA</td><td>R4-1</td><td>選択</td><td>1</td><td>A+</td><td>4</td>
+                </tr>
+                <tr>
+                    <td>感性科学</td><td>R4-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>管理システム論</td><td>R4-2</td><td>選択</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>人工知能論</td><td>R4-1</td><td>選択</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>情報科学セミナーB</td><td>R4-2</td><td>選択</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>教育工学・演習</td><td>R5-1</td><td>選択</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>情報保障技術学・演習</td><td>R4-2</td><td>選択</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr>
+                    <td>情報保障システム工学・演習</td><td>R4-1</td><td>選択</td><td>3</td><td>A</td><td>9</td>
+                </tr>
+                <tr>
+                    <td>情報保障評価法・演習</td><td>R4-2</td><td>選択</td><td>3</td><td>A+</td><td>12</td>
+                </tr>
+                <tr class="total">
+                    <td>専門教育科目（選択）：合計</td><td></td><td></td><td>38</td><td></td><td>131</td>
+                </tr>
+                <tr>
+                    <td>教職科目＋カリキュラム外科目</td><td></td><td></td><td></td><td></td><td></td>
+                </tr>
+                <tr>
+                    <td>教職概論</td><td>R2-2</td><td>-</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>教育原論</td><td>R3-1</td><td>-</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>教育心理学</td><td>R3-2</td><td>-</td><td>2</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>教育制度論</td><td>R3-2</td><td>-</td><td>2</td><td>A</td><td>3</td>
+                </tr>
+                <tr>
+                    <td>数学科教育法2</td><td>R3-1</td><td>-</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>数学科教育法4</td><td>R3-1</td><td>-</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>情報科教育法2</td><td>R3-1</td><td>-</td><td>2</td><td>A+</td><td>8</td>
+                </tr>
+                <tr>
+                    <td>教育方法・技術論</td><td>R3-1</td><td>-</td><td>2</td><td>A</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>障害者スポーツ</td><td>R4-2</td><td>-</td><td>1</td><td>A</td><td>3</td>
+                </tr>
+                <tr class="total">
+                    <td>教職科目＋カリキュラム外科目：合計</td><td></td><td></td><td>17</td><td></td><td>47</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

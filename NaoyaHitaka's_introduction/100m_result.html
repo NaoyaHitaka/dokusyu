@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <style>
+            h1{
+                text-align: center;
+                background-color: lightblue;
+            }
+            .button-container {
+            display: flex;
+            gap: 80px; /*ボタンの間隔を設定する*/
+            justify-content: center;  /*ボタンを中央に設置*/
+            /*background-color:#0000ff*/ 
+        }
+        .button01 a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            padding: 1em 2em;
+            width: 220px;
+            color: #ffffff;
+            font-size: 13.5px;
+            font-weight: 500;
+            background-color: #0000ff;
+            /*border: 3px solid #a0c4d3;*/
+            border-radius: 10px;
+        }
+        .button01 a::after {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-top: 3px solid #2285b1;
+            border-right: 3px solid #2285b1;
+            transform: rotate(45deg);
+        }
+        .button01 a:hover {
+            color: #333333;
+            text-decoration: none;
+            background-color: #a0c4d3;
+        }
+        .button01 a:hover::after{
+            border-top: 3px solid #333333;
+            border-right: 3px solid #333333;
+        }
+        .container {
+            display: flex; /* コンテナ内の要素を水平に配置 */
+            align-items: center; /* 要素を中央に配置 */
+        }
+        .text {
+            margin-left: 20px; /* 文章と画像の間隔を設定 */
+        }
+        th, td {
+            border: 1px solid #dddddd; /* セルの境界線 */
+            padding: 8px; /* セルの内側の余白 */
+            text-align: left; /* テキストを左寄せ */
+        }
+        th {
+            background-color: #f2f2f2; /* 見出し行の背景色 */
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* 偶数行の背景色 */
+        }
+        </style>
+        <title>日高直也の自己紹介ページ</title>
+    </head>
+    <body>
+        <h1>100m 年次成績</h1>
+        <table>
+            <thead>
+                <tr>
+                  <th>シーズン</th><th>パーソナルベスト（非公式含む）</th><th>パーソナルベスト（公式戦）</th><th>シーズンベスト</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <td>2014年シーズン(1年目)</td><td>18"36</td><td>18"36</td><td>18"36</td>
+                  </tr>
+                  <tr>
+                    <td>2015年シーズン(2年目)</td><td>16"36</td><td>16"36</td><td>16"36</td>
+                  </tr>
+                  <tr>
+                    <td>2016年シーズン(3年目)</td><td>16"36</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2017年シーズン(4年目)</td><td>16"36</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2018年シーズン(5年目)</td><td>16"36</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2019年シーズン(6年目)</td><td>14'17</td><td>16"36</td><td>14"17</td>
+                  </tr>
+                  <tr>
+                    <td>2020年シーズン(7年目)</td><td>14"17</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2021年シーズン(8年目)</td><td>14"17</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2022年シーズン(9年目)</td><td>13"41</td><td>16"36</td><td>13"41</td>
+                  </tr>
+                  <tr>
+                    <td>2023年シーズン(10年目)</td><td>13"41</td><td>16"36</td><td>-</td>
+                  </tr>
+                  <tr>
+                    <td>2024年シーズン(11年目)</td><td>13"41</td><td>16"36</td><td>-</td>
+                  </tr>
+              </tbody>
+        </table>
+    </body>
+</html>
